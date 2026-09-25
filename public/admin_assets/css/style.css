@@ -1,0 +1,11 @@
+body { font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+.wrapper { width: 100%; display: flex; align-items: stretch; overflow-x: hidden; }
+#sidebar { min-width: 250px; max-width: 250px; transition: all 0.3s; z-index: 1000; }
+#sidebar.active { min-width: 80px; max-width: 80px; text-align: center; }
+#sidebar.active .h4, #sidebar.active ul.components li.text-muted, #sidebar.active ul.components li a span, #sidebar.active ul.components li a { font-size: 0; padding: 0 !important; overflow: hidden; }
+#sidebar.active ul.components li a i { font-size: 24px; padding: 10px 0; display: block; margin: 0 !important; }
+#sidebar.active .h4 i { font-size: 32px; display: block; }
+@media (max-width: 768px) {
+    #sidebar { margin-left: -250px; position: fixed; }
+    #sidebar.active { margin-left: 0; }
+}
