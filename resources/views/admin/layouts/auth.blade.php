@@ -29,9 +29,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background: linear-gradient(-45deg, #f8fafc, #eff6ff, #f1f5f9, #e0e7ff);
             background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
+            animation: gradientBG 20s ease infinite;
             color: var(--text-main);
             overflow-x: hidden;
             overflow-y: auto;
@@ -61,16 +61,16 @@
         .blob-1, .blob-2 {
             position: fixed;
             border-radius: 50%;
-            filter: blur(60px);
+            filter: blur(80px);
             z-index: 1;
-            opacity: 0.6;
+            opacity: 0.25;
         }
         .blob-1 {
             top: -100px;
             left: -50px;
             width: 300px;
             height: 300px;
-            background: #ff007f;
+            background: #3b82f6; /* Blue */
             animation: float 8s ease-in-out infinite;
         }
         .blob-2 {
@@ -78,7 +78,7 @@
             right: -50px;
             width: 400px;
             height: 400px;
-            background: #00f0ff;
+            background: #8b5cf6; /* Purple */
             animation: float 10s ease-in-out infinite reverse;
         }
 

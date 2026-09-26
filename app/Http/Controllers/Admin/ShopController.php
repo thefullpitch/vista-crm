@@ -77,7 +77,7 @@ class ShopController extends Controller implements HasMiddleware
             'firm_name' => 'required|string|max:255',
             'contact_person' => 'required|string|max:255',
             'mobile' => 'required|string|max:20|unique:users,mobile',
-            'email' => 'nullable|email|max:255|unique:users,email',
+            'email' => 'required|email|max:255|unique:users,email',
             'state_id' => 'required|exists:states,id',
 
             'city_id' => 'required|exists:cities,id',
@@ -135,7 +135,7 @@ class ShopController extends Controller implements HasMiddleware
             'firm_name' => 'required|string|max:255',
             'contact_person' => 'required|string|max:255',
             'mobile' => 'required|string|max:20|unique:users,mobile,'.$shop->owner_id,
-            'email' => 'nullable|email|max:255|unique:users,email,'.$shop->owner_id,
+            'email' => 'required|email|max:255|unique:users,email,'.$shop->owner_id,
             'state_id' => 'required|exists:states,id',
 
             'city_id' => 'required|exists:cities,id',
@@ -287,7 +287,7 @@ class ShopController extends Controller implements HasMiddleware
             $address = trim($row[8]);
             $status = trim($row[9]) === 'Inactive' ? 'Inactive' : 'Active';
 
-            if (empty($firmName) || empty($contactPerson) || empty($mobile) || empty($stateName) || empty($cityName) || empty($pincodeVal)) {
+            if (empty($firmName) || empty($contactPerson) || empty($mobile) || empty($email) || empty($stateName) || empty($cityName) || empty($pincodeVal)) {
                 continue;
             }
 

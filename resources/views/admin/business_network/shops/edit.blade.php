@@ -42,8 +42,8 @@
                     <input type="text" name="mobile" class="form-control @error('mobile') is-invalid @enderror" value="{{ old('mobile', $shop->contact_number) }}" required>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label>Email</label>
-                    <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email', $shop->owner->email ?? '') }}">
+                    <label>Email <span class="text-danger">*</span></label>
+                    <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email', $shop->owner->email ?? '') }}" required>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label>State <span class="text-danger">*</span></label>
